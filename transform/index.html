@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform class</title>
+    <style>
+      img {
+        display: flex;
+        gap: 10px;
+        width: 250px;
+        height: 250px;
+      }
+      .dubai-img {
+        transition: all 1500ms ease-in-out;
+      }
+      .dubai-img:hover {
+        transform: scale(2) rotate(180deg);
+      }
+      .france-img {
+        transition: all 1000ms ease-out;
+      }
+      .france-img:hover {
+        transform: scale(0.5) rotateY(30deg) translate(100px);
+      }
+
+      .maldives-img {
+        transition: all 1000ms ease;
+      }
+
+      .maldives-img:hover {
+        transform: scale(1.5) rotate(90deg);
+      }
+      .switzerland-img {
+        width: 450px;
+        height: 450px;
+      }
+      .switzerland-img:hover {
+        transform: rotate(90deg) scale(1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="dubai-img">
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/099/308/original/dubai.jpg?1696660074"
+        alt="dubai-picture"
+      />
+    </div>
+
+    <div class="france-img">
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/099/307/original/paris1.jpg?1696660060"
+        alt="france-picture"
+      />
+    </div>
+
+    <div class="maldives-img">
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/099/306/original/maldives.jpg?1696660034"
+        alt="maldives-picture"
+      />
+    </div>
+
+    <div class="switzerland-img">
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/099/304/original/switzerland.jpg?1696659383"
+        alt="switzerland-picture"
+      />
+    </div>
+  </body>
+</html>
