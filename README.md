@@ -1,4 +1,4 @@
-🤩 Welcome to the SheCodes Basics Add-On workshop! This is a coding workshop offered by SheCodes in addition to their basic program as part of my project.
+🤩 Welcome to my additional Front-End practice projects! This is a coding practice workshop offered by SheCodes in addition to their basic program as part of my project.
 
 - In this workshop, l have access to short lesson videos, coding challenges, and homework assignments, with a final project to complete. There are weekly assignment deadlines, but no specific time slots or schedules. I can work at my convenience.
 
