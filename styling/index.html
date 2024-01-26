@@ -8,37 +8,50 @@
     <style>
       body {
         text-align: center;
-        background: rgb(234, 234, 40);
+        background: #ffeb3b;
       }
 
       h1 {
         font-size: 60px;
+        padding: 10px 10px;
+        margin: 10px 10px;
       }
 
       h2 {
         font-size: 30px;
         font-style: italic;
       }
-      .container {
-        background: white;
-        padding: 20px;
-        margin: 40px 80px;
-        text-align: center;
-        border-radius: 10px;
-        border: 2px solid black;
+
+      .dark {
+        background: #001f3f;
+        color: whitesmoke;
       }
 
-      main-img {
+      .container {
+        max-width: 800px;
+        background: white;
+        padding: 20px;
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 10px;
+        color: black;
+      }
+
+      .main-img {
         max-width: 100%;
-        height: 800px;
-        width: 800px;
+        height: auto;
+        border-radius: 40px;
+      }
+
+      .img-gallery {
+        max-width: 100%;
+        width: 500px;
+        height: 500px;
         border-radius: 10px;
       }
-      image-gallery {
-        max-width: 100%;
-        height: 500px;
-        width: 500px;
-        border-radius: 10px;
+
+      p {
+        font-size: larger;
       }
 
       footer {
@@ -46,78 +59,82 @@
         margin-top: 10px;
       }
 
-      theme-button {
-        padding: 10px 10px;
-        margin-top: 10px;
-        font-size: 12px;
-        background-color: black;
-        color: white;
-        border-radius: 10px;
-      }
-      theme-button:hover {
+      .themeButton {
+        padding: 15px 15px;
+        font: 12px;
+        background-color: white;
         color: black;
+        border-radius: 15px;
+      }
+      .themeButton:hover {
+        color: #1b5e20;
         background: white;
       }
 
-      button {
+      .darkTheme {
         padding: 10px;
-        color: black;
-        font-size: 15px;
+        color: #1b5e20;
       }
     </style>
   </head>
 
   <body>
-    <theme-button>Dark theme</theme-button>
+    <button class="themeButton">Dark theme</button>
     <h1>Sports</h1>
     <h2>My favorite hobbies</h2>
 
     <div class="container">
       <img
         class="main-img"
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/256/original/GameOnImg.png?1697178161"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/112/238/original/finalmainImg.png?1706230928"
         alt="GameontextImage"
+        class="gameon-4pic"
       />
+
+      <p>
+        Sports are fun activities that you can do with your friends, family or
+        even by yourself. They can help you stay healthy, fit and happy. Sports
+        can also teach you important skills like teamwork, discipline and
+        perseverance. Some examples of sports are soccer, basketball, tennis,
+        swimming and running. You can choose the sport that suits your interests
+        and abilities. Playing sports can also be a great way to relax, have fun
+        and make new friends. Sports can improve your mood, confidence and
+        self-esteem. So what are you waiting for? Grab your gear and go play
+        some sports today!
+      </p>
 
       <div class="image-gallery">
         <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/252/original/badminton.jpg?1697176140"
-          alt="badminton"
+          alt="badminton-img"
+          class="badminton-pic"
         />
 
         <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/253/original/tennis.jpg?1697176233"
           alt="tennis"
+          class="tennis-pic"
         />
 
         <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/254/original/pingpong.jpg?1697176251"
           alt="pingpong"
+          class="pingpong-pic"
         />
 
         <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/255/original/bowling.jpg?1697176600"
           alt="bowling"
+          class="bowlinggame-pic"
         />
 
         <p>
-          Sports are fun activities that you can do with your friends, family or
-          even by yourself. They can help you stay healthy, fit and happy.
-          Sports can also teach you important skills like teamwork, discipline
-          and perseverance. Some examples of sports are soccer, basketball,
-          tennis, swimming and running. You can choose the sport that suits your
-          interests and abilities. Playing sports can also be a great way to
-          relax, have fun and make new friends. Sports can improve your mood,
-          confidence and self-esteem. So what are you waiting for? Grab your
-          gear and go play some sports today!
-        </p>
-
-        <p>
-          More info from Wikipedia
+          More info from Wikipedia <br />
           <a
             href="https://en.wikipedia.org/wiki/List_of_sports"
             target="_blank"
             rel="noopener"
+            aria-label="wiki website"
             >List of Sports</a
           >
         </p>
@@ -138,5 +155,14 @@
         >
       </p>
     </footer>
+
+    <script>
+      let themeButton = document.querySelector(".themeButton");
+      themeButton.addEventListener("click", darkTheme);
+
+      function darkTheme() {
+        document.body.classList.toggle("dark");
+      }
+    </script>
   </body>
 </html>
