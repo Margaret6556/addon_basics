@@ -1,12 +1,170 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styling</title>
+
+    <style>
+      body {
+        text-align: center;
+        background: #ffeb3b;
+      }
+
+      h1 {
+        font-size: 60px;
+        padding: 10px 10px;
+        margin: 10px 10px;
+      }
+
+      h2 {
+        font-size: 30px;
+        font-style: italic;
+      }
+
+      .dark {
+        background: #001f3f;
+        color: black;
+      }
+
+      .container {
+        max-width: 70%;
+        background: white;
+        padding: 20px;
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 10px;
+      }
+
+      .main-img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .gallery-container img {
+        padding: 20px;
+        align-items: center;
+        max-width: 90%;
+      }
+
+      .main-img {
+        border-radius: 10px;
+        filter: contrast(50%);
+        transition: 150ms ease-in-out;
+      }
+
+      .main-img:hover {
+        transform: scale(1.1);
+      }
+      p {
+        font-size: larger;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .themeButton {
+        padding: 10px;
+        font: 12px;
+        background-color: white;
+        color: black;
+        border-radius: 15px;
+      }
+      .themeButton:hover {
+        color: #1b5e20;
+        background: white;
+      }
+
+      .darkTheme {
+        padding: 10px;
+        color: #1b5e20;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button class="themeButton">Dark theme</button>
+    <h1>Sports</h1>
+    <h2>My favorite hobbies</h2>
+
+    <div class="container">
+      <img
+        class="main-img"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/112/238/original/finalmainImg.png?1706230928"
+        alt="GameontextImage"
+      />
+
+      <p>
+        Sports are fun activities that you can do with your friends, family or
+        even by yourself. They can help you stay healthy, fit and happy. Sports
+        can also teach you important skills like teamwork, discipline and
+        perseverance. Some examples of sports are soccer, basketball, tennis,
+        swimming and running. You can choose the sport that suits your interests
+        and abilities. Playing sports can also be a great way to relax, have fun
+        and make new friends. Sports can improve your mood, confidence and
+        self-esteem. So what are you waiting for? Grab your gear and go play
+        some sports today!
+      </p>
+
+      <div class="gallery-container">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/252/original/badminton.jpg?1697176140"
+          alt="badminton-img"
+          class="shuttlecock-picture"
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/253/original/tennis.jpg?1697176233"
+          alt="tennis"
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/254/original/pingpong.jpg?1697176251"
+          alt="pingpong"
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/255/original/bowling.jpg?1697176600"
+          alt="bowling"
+        />
+
+        <p>
+          More info from Wikipedia <br />
+          <a
+            href="https://en.wikipedia.org/wiki/List_of_sports"
+            target="_blank"
+            rel="noopener"
+            aria-label="wiki website"
+            >List of Sports</a
+          >
+        </p>
+
+        <button>Learn more</button>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        Made with ❤️ by
+        <a
+          href="http://www.margaretcezar.com"
+          target="_blank"
+          rel="noopener"
+          aria-label="author's website"
+          >Margaret Cezar</a
+        >
+      </p>
+    </footer>
+
+    <script>
+      let themeButton = document.querySelector(".themeButton");
+      themeButton.addEventListener("click", darkTheme);
+
+      function darkTheme() {
+        document.body.classList.toggle("dark");
+      }
+    </script>
+  </body>
 </html>
