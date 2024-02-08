@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basics Add On Project</title>
+
+    <style>
+      body {
+        text-align: center;
+      background: #ffca00;  
+    }
+    
+
+      h1 {
+        font-size: 70px;
+    
+        background: linear-gradient( blue, #ffca00);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      h2 {
+        font-size: 30px;
+        font-style: italic;
+      }
+
+      .dark {
+        background: #001f3f;
+        color: black;
+      }
+
+      .dark h1 {
+        color: white;
+      }
+      .dark h2 {
+        color: white;
+      }
+
+      .container {
+        max-width: 70%;
+        background: white;
+        padding: 20px;
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 10px;
+      }
+
+      .main-img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: 150ms ease-in-out;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 15px;
+        width: 100%;
+      }
+
+      .main-img:hover {
+        transform: scale(1.1);
+        filter: contrast(85%);
+      }
+
+      p {
+        font-size: larger;
+      }
+      
+      a {
+        color:blue;;
+      }
+      footer {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .themeButton {
+        padding: 10px;
+        font: 12px;
+        background-color: white;
+        color: black;
+        border-radius: 15px;
+      }
+      .themeButton:hover {
+        background: #001f3f;
+        color: white;
+      }
+
+      .grid-container img{
+        display: grid;
+        width: 100%;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+        border-radius: 10px;
+        border: 5px outset #5693cf;
+      }
+
+     .button-with-gradient {
+      border: 3px solid transparent; 
+      border-image: radial-gradient(circle at 12.3% 19.3%, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%); 
+      border-image-slice: 1; 
+      padding: 10px;
+      margin: 10px;
+      }
+
+      .button-with-gradient:hover {
+        background-color: blue;
+        color: white;
+      }
+
+      .shuttlecock-picture:hover{
+        transform: scale(1.5);
+        transition: all 400ms ease-in-out;
+       }
+ 
+       .tennis-picture:hover{
+        transform: scale(1.5);
+        transition: all 400ms ease-in-out;
+       }
+
+       .pingpong-picture:hover{
+        transform: scale(1.5);
+        transition: all 400ms ease-in-out;
+       }
+
+       .bowling-picture:hover{
+        transform: scale(1.5);
+        transition: all 400ms ease-in-out;
+       }
+        
+    </style>
+  </head>
+
+  <body>
+    <button class="themeButton">CHANGE THEME</button>
+    <h1> Racquet Sports</h1>
+    <h2>My favorite hobbies</h2>
+
+    <div class="container">
+      <img
+        class="main-img"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/112/238/original/finalmainImg.png?1706230928"
+        alt="GameontextImage"
+      />
+
+      <div class="grid-container">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/369/original/RBadminton.jpg?1706843084"
+          alt="badminton-img"
+          class="shuttlecock-picture"
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/372/original/Rtennis.jpg?1706843120"
+          alt="tennis"
+           class="tennis-picture"
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/371/original/Rpingpong.jpg?1706843109"
+          alt="pingpong"
+           class="pingpong-picture"
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/370/original/Rbowling.jpg?1706843098"
+          alt="bowling"
+           class="bowling-picture"
+        />
+        </div>
+
+        <p>
+        Sports are fun activities that you can do with your friends, family or
+        even by yourself. They can help you stay healthy, fit and happy. Sports
+        can also teach you important skills like teamwork, discipline and
+        perseverance. Some examples of sports are soccer, basketball, tennis,
+        swimming and running. You can choose the sport that suits your interests
+        and abilities. Playing sports can also be a great way to relax, have fun
+        and make new friends. Sports can improve your mood, confidence and
+        self-esteem. So what are you waiting for? Grab your gear and go play
+        some sports today!
+      </p>
+
+        <p>
+          More info from Wikipedia <br />
+          <a
+            href="https://en.wikipedia.org/wiki/List_of_sports"
+            target="_blank"
+            rel="noopener"
+            aria-label="wiki website"
+            >List of Sports</a
+          >
+        </p>
+
+        <button class="button-with-gradient">Learn more</button>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        Made with ❤️ by
+        <a
+          href="http://www.margaretcezar.com"
+          target="_blank"
+          rel="noopener"
+          aria-label="author's website"
+          >Margaret Cezar</a
+        >
+      </p>
+    </footer>
+
+    <script>
+      let themeButton = document.querySelector(".themeButton");
+      themeButton.addEventListener("click", darkTheme);
+
+      function darkTheme() {
+        document.body.classList.toggle("dark");
+      }
+    </script>
+  </body>
+</html>
