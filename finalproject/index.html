@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basics Add On Project</title>
+    <title title="Hobby Add-on Project">Basics Add On Project</title>
 
     <style>
       body {
@@ -63,10 +63,6 @@
         transform: scale(1.1);
         filter: contrast(85%);
       }
-
-      p {
-        font-size: larger;
-      }
       
       a {
         color:blue;
@@ -86,6 +82,7 @@
       .themeButton:hover {
         background: #001f3f;
         color: white;
+        transition: all 300ms ease-in-out;
       }
 
       .grid-container img{
@@ -108,7 +105,12 @@
       }
 
       .button-with-gradient:hover {
-        background-color: blue;
+        background-color: blue;       
+        transition: 400ms ease-in-out;
+        opacity: 0.5;
+      }
+
+      .button-with-gradient a:hover {
         color: white;
       }
 
@@ -136,7 +138,7 @@
   </head>
 
   <body>
-    <button class="themeButton">CHANGE THEME</button>
+    <button class="themeButton">Change Theme</button>
     <h1> Racquet Sports</h1>
     <h2>My favorite hobbies</h2>
 
@@ -185,16 +187,14 @@
         some sports today!
       </p>
 
-        <p>
-          More info from Wikipedia <br />
-          <a
-            href="https://en.wikipedia.org/wiki/List_of_sports"
-            target="_blank"
-            rel="noopener"
-            aria-label="wiki website"
-            >List of Sports</a
-          >
-        </p>
+<h3>
+  📖 Read from Wikipedia📖<br />
+  <br />
+  <a href="https://en.wikipedia.org/wiki/List_of_sports"
+    target="_blank"
+    rel="noopener"
+    aria-label="wiki website">List of Sports</a>
+</h3>
 
        <button class="button-with-gradient">
   <a href="https://www.betterhealth.vic.gov.au/health/healthyliving/sport-and-children" target="_blank" rel="noopener" aria-label="sports benefits">Learn more</a> </button>
