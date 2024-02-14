@@ -5,3 +5,5 @@
 - The workshop begin any time after the start date, and I am expected to complete about 5 hours of coding work each week.
 
 - I hope you like it! 😊
+
+- Here's the preview >> https://www.shecodes.io/cohorts/shecodes-basics-add-on-a77819c2-7e06-4390-8118-ebc9dcd5acea/projects/2075173 
